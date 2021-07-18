@@ -13,30 +13,32 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.yellow,
       ),
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("Appbar"),
-        ),
-        body: Center(
-          child: Container(
-            child: Text('Hi', style: TextStyle(fontSize: 40)),
-            width: 200,
-            height: 100,
-            margin: EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              color: Colors.red,
-              shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black,
-                  offset: Offset(3, 6),
-                  blurRadius: 10,
-                ),
-              ],
-              border: Border.all(color: Colors.green, width: 3),
-            ),
+          appBar: AppBar(
+            title: Text("Appbar"),
           ),
-        ),
-      ),
+          body: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: <Widget>[
+              Container(
+                child: Text("Hai"),
+                decoration: BoxDecoration(color: Colors.red),
+              ),
+              Container(
+                child: Text("Hai"),
+                decoration: BoxDecoration(color: Colors.yellow),
+              ),
+              Container(
+                child: Text("Hai"),
+                decoration: BoxDecoration(color: Colors.green),
+              ),
+              Column(
+                children: <Widget>[
+                  Text("Kolom"),
+                  Text('Lorem ipsum dolor sit amet'),
+                ],
+              )
+            ],
+          )),
     );
   }
 }
